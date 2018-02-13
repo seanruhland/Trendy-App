@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <!--   <style type="text/css">
+     #map {
+        height: 95%;
+        width: 100%;
+       }
+   </style> -->
+  </head>
+  <body>
+    <!-- template -->
+    <script id="entry-template" type="text/x-handlebars-template">
+      <li class="item">
+          {{item}}
+      </li>
+    </script>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-inverse">
+      <div class="navbar-brand menu">Menu</div>
+      <form class="navbar-form navbar-right" id="search-form" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </nav>
+
+    <!-- sidetray -->
+    <div id="sidebar" id="parent">
+
+      <ul id="sidebar_menu" class="sidebar-nav">
+        <ul class="sidebar-nav" id="names-list"></ul>
+      </ul>
+    </div>
+    
+    <!-- map hook -->
+    <div id="map"></div>
+
+    <!-- js libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+    <script type="text/javascript" src="markerclusterer.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD23JhOlvDUyJv2i7Ob519kKXtRzsx5rG8&callback=initMap">
+    </script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
+
+
